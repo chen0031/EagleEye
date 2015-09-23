@@ -1,0 +1,11 @@
+CPU.User CPU.Sys
+CPU.Sys CPU.ProcQue
+MEM.Used CPU.ProcQue
+CPU.ProcQue NET.RxPktTo
+MEM.Used SOCK.Used
+CPU.Sys MEM.PageFaults
+CPU.User NET.RxPktTo
+CPU.User MEM.PageFaults
+MEM.PageFaults NET.RxPktTo
+SOCK.Used NET.RxPktTo
+SOCK.Used CPU.ProcQue           

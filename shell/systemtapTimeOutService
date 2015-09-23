@@ -1,0 +1,43 @@
+#!/bin/sh
+#Source function library
+./etc/init.d/functions
+service_name="systemtapTimeOut"
+bin_dir="/EagleEye/shell"
+pid_dir="/EagleEye/run/systemtap_metric_timeout.pid"
+interval=$2 
+usage()
+{ 
+ echo "usage:$0 {start interval | stop}"
+} 
+start()
+{
+ if [ -f $pid_dir ]
+ then 
+   echo "$service_name is already started"
+   exit 0;
+ else
+   $bin_dir/$service_name $interval &
+   echo "$service_name is started successfully"
+   exit 0;
+ fi  
+}
+stop()
+{
+  echo "Stopping $service_name ... "
+  kill `cat $pid_dir`
+  rm -f $pid_dir
+  echo "$service_name is stopped"
+}
+case "$1" in 
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  usage)
+    usage
+    ;;
+    *)
+  exit 1
+  esac

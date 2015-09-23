@@ -1,0 +1,51 @@
+#!/bin/sh
+# The function should be deployed in the /etc/rc.d/init.d/performanceMetricByPid
+#Source function library
+./etc/init.d/functions 
+#Define the service name
+service_name="performanceMetricByPid"
+#Define the execute file location
+bin_dir="/EagleEye/shell/$service_name"
+#Define the pid file localtion
+pid_dir="/EagleEye/run/performance_metric.pid"
+#Define the interval
+interval=$2
+#functions
+#usage function
+usage(){
+echo "usage:$0 {start interval|stop}"   
+}
+#start function
+start(){
+#check the daemon status first
+if[ -f /var/lock/subsys/$service_name ]
+then  
+  echo "$service_name is already started"
+exit 0;
+else
+  /EagleEye/shell/performanceMetricByPid $interval 
+  echo "$service_name is started"
+  [$? -eq 0] && touch /var/lock/subsys/$service_name
+  exit 0;
+fi
+}
+#stop function
+stop(){
+ echo "Stoping $service_name ... "
+ kill `cat $pid_dir`
+ rm -f $pid_dir
+ echo "$service_name is stopped"
+}
+case "$1" in  
+ start)
+  start
+  ;;
+ stop)
+  stop
+  ;;
+ *)
+  usage
+  ;;
+esac  
+
+    

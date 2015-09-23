@@ -1,0 +1,10 @@
+tcp        0      0 localhost:5901              localhost:43878             ESTABLISHED 
+tcp        0      0 localhost:43878             localhost:5901              ESTABLISHED 
+tcp        0     52 SofewareAging2:ssh          192.168.1.115:tarantella    ESTABLISHED 
+tcp        0      0 localhost:5904              localhost:45973             ESTABLISHED 
+tcp        0      0 SofewareAging2:33179        207.86.215.42:http          ESTABLISHED 
+tcp        0      0 localhost:33235             localhost:5902              ESTABLISHED 
+tcp        0      0 SofewareAging2:ssh          192.168.1.116:50510         ESTABLISHED 
+tcp        0      0 localhost:45973             localhost:5904              ESTABLISHED 
+tcp        0      0 SofewareAging2:ssh          192.168.1.114:52479         ESTABLISHED 
+tcp        0      0 localhost:5902              localhost:33235             ESTABLISHED 

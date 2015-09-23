@@ -1,0 +1,38 @@
+<!-- This template XML file is used to determine how to rejuvernate the software system -->
+<?xml version="1.0" encoding="Unicode"?>
+<actions>
+  <granularity name="system">
+    <system ip="192.168.1.109">
+      <action name="reboot">
+         <param>
+           <periodic enabled="true">
+             <inverval>20</interval> 
+           </periodic>
+         </param>
+      </action>
+      <action name="reconfig">
+        <param>
+          <periodic enabled="true">
+            <interval>20</interval>
+          </periodic>
+          <numeric>
+            <items>
+              <physicalResources>
+                <memory>1000</memory>
+                <cpu>1</cpu>
+              </physicalResources>
+              <logicalResources>
+                <dirty_ratio>40</dirty_ratio>
+              </logicalResources>
+            </items>  
+          </numeric>
+          <category>
+            <items>
+               <item name="memoryClean"/>
+            </items>
+          </category> 
+    </system>    
+  </granularity>  
+</actions>
+
+ 

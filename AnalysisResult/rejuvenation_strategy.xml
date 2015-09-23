@@ -1,0 +1,136 @@
+<!-- This template XML file is used to determine how to rejuvernate the software system -->
+<?xml version="1.0" encoding="Unicode"?>
+<actions>
+  <granularity name="system">
+    <system ip="192.168.1.109">
+      <action name="reboot">
+         <param>
+           <periodic enabled="true">
+             <inverval>20</interval> 
+           </periodic>
+         </param>
+      </action> 
+      <action name="migrate">
+         <param>
+           <periodic enabled="true">
+              <interval>20</interval>
+           </periodic>
+           <source>Guest-CentOS6-3</source>
+           <destination>192.168.1.114</destination>
+         </param>
+      </action>
+      <action name="reconfig">
+        <param>
+          <periodic enabled="true">
+            <interval>20</interval>
+          </periodic>
+          <numeric>
+            <items>
+              <physicalResources>
+                <source>Guest-CentOS6-3</source>
+                <memory>1000</memory>
+                <cpu>60</cpu>
+              </physicalResources>
+              <!--<appConfig>
+                <filePath>/etc/httpd/httpd.conf</configPath>
+                <parameters>
+                  <MAX_CLIENTS>500</MAX_CLIENTS>
+                </parameters> 
+              </appConfig> -->
+              <logicalResources>
+                <dirty_ratio>40</dirty_ratio>
+              </logicalResources>
+            </items>  
+          </numeric>
+          <category>
+            <items>
+            <!--  <memoryClean>true</memoryClean> -->
+              <item name="memoryClean"/>
+              
+            </items>
+          </category> 
+    </system>    
+   <!-- We can add another machine in the list -->           
+    <system ip="192.168.1.117">
+    </system>      
+  </granularity>
+  <granularity name="service">
+   <system ip="192.168.1.117">
+    <service name="httpd">
+      <action name="reboot">
+        <param>
+          <periodic enabled="true">
+            <interval>20</interval>
+          </periodic>
+        </param>
+      </action>
+      <action name="reconfig">
+        <param>
+          <periodic enabled="true">
+            <interval>20</interval>
+          </periodic>
+          <numeric>
+            <items>
+              <physicalResource>
+                <memory>1000</memory>
+                <cpu>20</cpu>
+              </physicalresource>
+              <logicalResource>
+                <filePath>/etc/httpd/conf/httpd.conf</filepath>
+                <metrics>
+                  <Timeout>100</Timeout>
+                </metrics>
+              </logicalResource>
+              <workload>200</workload>
+            </items>
+          </numeric>
+          <category>
+            <items>
+            <!--  <memoryClean>true</memoryClean> -->
+              <item name="memoryClean"/>
+
+            </items>
+          </category>
+        </param>
+      </action> 
+    </service>
+   </system>
+    <!-- We can add other services in the list -->
+   <system ip="192.168.1.111">
+    <service name="tomcat">
+    </service>
+   </system>
+  </granularity>
+  <granularity name="process">
+   <system ip="192.168.1.1.117">
+    <process name="ntpd">
+      <action name="reboot">
+        <param>
+          <periodic enabled="true">
+            <interval>20</interval>
+          </periodic>
+        </param>
+      </action>
+      <action name="reconfig">
+        <param>
+          <numeric>
+            <items>
+              <physicalResource>
+                  <memory>1000</memory>
+                  <cpu>20</cpu>
+              </physicalResource>
+            </items>
+        </param>
+      </action> 
+      <action name="stop"></action>        
+    </process>
+   </system>
+    <!-- We can add additional processes in the list -->
+   <system ip="192.168.1.117">
+    <process name="collectl">
+    </process>
+   </system>
+  </granularity>  
+</actions>
+
+ 

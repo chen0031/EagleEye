@@ -1,0 +1,28 @@
+#!/bin/sh
+interval=$1
+dataDir='/EagleEye/data/performance_metric_by_pid';
+performanceFile='performance_current'
+fileSize=0
+echo $$ > /EagleEye/run/performance_metric.pid
+pidstat -hurdw | sed -n '3p' >> $dataDir/$performanceFile
+while sleep $interval
+  do
+      
+      pidstat -hurdw | sed -n '4,$p'  >> $dataDir/$performanceFile
+#      for i in 'cat performance_current.tmp'
+#      do
+#        echo $i > $dataDir/$performanceFile
+#      done 
+#      rm -f performance_current.tmp
+     
+      fileSize=`ls -l $dataDir/performance_current | awk '{print $5}'`
+      if [ $fileSize -ge 209715200 ]
+#for test
+#     if [ $fileSize -ge 10000 ]
+      then
+        currentTime=`date +%s`
+        fileName='performanceMetrics'
+        tar -czvf $dataDir/$fileName$currentTime.tar.gz $dataDir/$performanceFile
+      fi
+  done
+#rm -f /EagleEye/run/performance_metric.pid

@@ -1,0 +1,26 @@
+#!/bin/sh
+#File latency for read and write ---- iotime.stp 
+interval=$1
+exec_script='timeout.stp'
+dataDir='/EagleEye/data/systemtap_performance_metric'
+#fileSize=0
+pid_path='/EagleEye/run/systemtap_metric_timeout.pid'
+tap_script_path='/EagleEye/systemtap'
+echo $$ > $pid_path
+stap $tap_script_path/$exec_script $interval > $dataDir/$exec_script.metric
+
+#tap_collection_config_path='/EagleEye/systemtap/collection.conf'
+#awk '{if ($1 != "#" && length($1) != 0) print $1}' $tap_collection_config_path > $tap_script_path/collection.conf.tmp 
+#for i in `cat collection.conf.tmp`
+#do
+#  printf $line 
+#  stap $i $interval > $dataDir/$i.metric
+#  exec_scripts[$j]=$i
+#  let j=$j+1
+#  printf ${exec_scripts[$j]} "\n"
+#done
+    
+
+ 
+#echo $$ > $pid_path
+

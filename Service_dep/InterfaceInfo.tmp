@@ -1,0 +1,2 @@
+qemu-kvm localhost:5901->localhost:37490
+python localhost:37490->localhost:5901

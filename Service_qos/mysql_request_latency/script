@@ -1,0 +1,2 @@
+#How to use tcprstat?
+tcprstat -p 3306 -t 1 -n 0 -l 192.168.1.107
