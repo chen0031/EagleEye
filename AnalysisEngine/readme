@@ -1,0 +1,4 @@
+This directory contains all the analysis approaches such as anomaly detection, causality analysis, root cause inference, comparison study, and etc.
+I prefer the developers to use Python to implement their approaches. 
+
+It's better to provide the analysis method in a gracefull API format.
