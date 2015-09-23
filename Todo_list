@@ -1,0 +1,2 @@
+To get the precise dependency among processes, it's neccessary to implement the sending and recieving package information of a process which utilizes a TCP protocol. The goal of this method is to identify the direction of the message propogation from statistical perspective.   
+
