@@ -1,0 +1,127 @@
+1356865870156143 23603 (python) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865870156157 23603 (python) access /dev/sr0 read: 0 write: 0
+1356865871156142 2604 (libvirtd) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865871156155 2604 (libvirtd) access /dev/sr0 read: 0 write: 0
+1356865872156182 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865872156196 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865872156202 0 (swapper) access /proc/cpuinfo read: 6144 write: 0
+1356865872156209 0 (swapper) iotime /proc/cpuinfo time: 233
+1356865873156142 23603 (python) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865873156152 23603 (python) access /dev/sr0 read: 0 write: 0
+1356865874156182 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865874156195 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865874156201 0 (swapper) access /proc/cpuinfo read: 6742 write: 0
+1356865874156209 0 (swapper) iotime /proc/cpuinfo time: 234
+1356865874156214 0 (swapper) access /sys/devices/system/cpu read: 0 write: 0
+1356865875156178 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865875156192 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865876156185 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865876156198 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865877156216 0 (swapper) access /sys/devices/system/cpu/cpu0/online rea[?1049h[?1h=[?12;25h[?12l[?25h[27m[m[H[2J[?25l[1;1H[33m 78 [m[34m      printf("%d %s iotime %s time: %d\n",  timestamp(), proc(),[m
+[33m 79 [m[34m             filehandles[pid(), $fd], @sum(time_io[pid(), $fd]))[m
+[33m 80 [m[34m   }*/[m
+[33m 81 [m  [33mdelete[m fileread[pid(), $fd]
+[33m 82 [m  [33mdelete[m filewrite[pid(), $fd]
+[33m 83 [m  [33mdelete[m filehandles[pid(), $fd]
+[33m 84 [m  [33mdelete[m time_io[pid(),$fd]
+[33m 85 [m}
+[33m 86 [mprobe timer.s($[31m1[m)
+[33m 87 [m{
+[33m 88 [m foreach ([pid,fd] [33min[m filehandles){
+[33m 89 [m   printf("%d %s access %s read: %d write: %d\n",[32mtimestamp[m(),proc(),filehandd[13;1H[33m    [mles[pid,fd],fileread[pid,fd],filewrite[pid,fd])
+[33m 90 [m   [33mif[m(@[36mcount[m(time_io[pid,fd]))
+[33m 91 [m     printf("%d %s iotime %s [32mtime[m: %d\n", [32mtimestamp[m(),proc(),filehandles[pidd[16;1H[33m    [m,fd],@[36msum[m(time_io[pid,fd]))
+[33m 92 [m   }
+[33m 93 [m[34m/* delete fileread[m
+[33m 94 [m[34m delete filewrite[m
+[33m 95 [m[34m delete filehandles[m
+[33m 96 [m[34m delete time_io */[m
+[33m 97 [m}
+[33m 98 [m[24;63H98,0-1[8CBot[23;5H[?12l[?25h[24;63H[K[24;1H
+[32mW11: Warning: File "iotime.stp" has changed since editing started[m
+[32mSee ":help W11" for more info.[m
+[32m[O]K, (L)oad File: [m[?1l>[?1049lVim: Caught deadly signal HUP
+Vim: Finished.
+[24;1H83 (qemu-kvm) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865887156156 2983 (qemu-kvm) access /dev/sr0 read: 0 write: 0
+1356865888156178 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865888156192 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865889156145 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865889156160 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865890156190 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865890156203 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865891156201 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865891156215 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865891156221 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865891156228 0 (swapper) iotime /proc/meminfo time: 31
+1356865892156173 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865892156187 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865892156193 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865892156200 0 (swapper) iotime /proc/meminfo time: 31
+1356865893156185 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865893156198 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865893156204 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865893156211 0 (swapper) iotime /proc/meminfo time: 31
+1356865894156164 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865894156178 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865894156184 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865894156191 0 (swapper) iotime /proc/meminfo time: 31
+1356865895156176 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865895156190 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865895156195 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865895156202 0 (swapper) iotime /proc/meminfo time: 31
+1356865896156189 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865896156202 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865896156207 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865896156214 0 (swapper) iotime /proc/meminfo time: 31
+1356865896156219 0 (swapper) access /sys/bus/pci/devices/tap/irq read: 0 write: 0
+1356865897156177 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865897156189 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865897156195 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865897156201 0 (swapper) iotime /proc/meminfo time: 31
+1356865897156206 0 (swapper) access /sys/bus/pci/devices/tap/irq read: 0 write: 0
+1356865898156177 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865898156189 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865898156194 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865898156201 0 (swapper) iotime /proc/meminfo time: 31
+1356865898156205 0 (swapper) access /sys/bus/pci/devices/tap/irq read: 0 write: 0
+1356865899156177 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865899156189 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865899156194 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865899156201 0 (swapper) iotime /proc/meminfo time: 31
+1356865899156206 0 (swapper) access /sys/bus/pci/devices/tap/irq read: 0 write: 0
+1356865900156186 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865900156199 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865900156205 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865900156212 0 (swapper) iotime /proc/meminfo time: 31
+1356865900156217 0 (swapper) access /sys/bus/pci/devices/tap/irq read: 0 write: 0
+1356865901156180 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865901156192 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865901156197 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865901156204 0 (swapper) iotime /proc/meminfo time: 31
+1356865901156209 0 (swapper) access /sys/bus/pci/devices/tap/irq read: 0 write: 0
+1356865902156182 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865902156195 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865902156200 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865902156207 0 (swapper) iotime /proc/meminfo time: 31
+1356865902156212 0 (swapper) access /sys/bus/pci/devices/tap/irq read: 0 write: 0
+1356865903156179 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865903156192 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865903156198 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865903156204 0 (swapper) iotime /proc/meminfo time: 31
+1356865903156209 0 (swapper) access /sys/bus/pci/devices/tap/irq read: 0 write: 0
+1356865904156177 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865904156190 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865904156196 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865904156203 0 (swapper) iotime /proc/meminfo time: 31
+1356865904156208 0 (swapper) access /sys/bus/pci/devices/tap/irq read: 0 write: 0
+1356865905156187 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865905156196 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865905156201 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865905156207 0 (swapper) iotime /proc/meminfo time: 31
+1356865905156212 0 (swapper) access /sys/bus/pci/devices/tap/irq read: 0 write: 0
+1356865906156179 0 (swapper) access /sys/devices/system/cpu/cpu0/online read: 0 write: 0
+1356865906156191 0 (swapper) access /dev/sr0 read: 0 write: 0
+1356865906156196 0 (swapper) access /proc/meminfo read: 1198 write: 0
+1356865906156203 0 (swapper) iotime /proc/meminfo time: 31
+1356865906156208 0 (swapper) access /sys/bus/pci/devices/tap/irq read: 0 write: 0

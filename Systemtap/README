@@ -1,0 +1,11 @@
+What metrics do we want to collect by systemtap scripts?
+a.Process-level
+  1.network tranmition including the recv and transmit packages
+  2.latency spent on the reading or writing files
+  3.timedout functions and the numbers---epoll,select...
+  4.latency and count of some functions
+  5.latency and count of some systemcalls
+b.OS-level
+  1.latency distribution in the whole system.
+  2.time spent on kernel functions.
+  3.memory page relaimation   
